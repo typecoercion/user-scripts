@@ -3,7 +3,7 @@
 // @icon         https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/aws.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -14,7 +14,7 @@
 
 GM_addStyle(`
 
-#f {
+#console-nav-footer {
   display: none !important;
 }
 
