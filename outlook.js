@@ -14,11 +14,11 @@
 
 GM_addStyle(`
 
-div:has(> div[title^="In-Place Archive - "]) {
+div:has(> div[title^="In-Place Archive -"]) {
   display: none;
 }
 
-div:has(> div[title^="Personal Archive - "]) {
+div:has(> div[title^="Personal Archive -"]) {
   display: none;
 }
 
