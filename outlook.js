@@ -3,7 +3,7 @@
 // @icon         https://res-1.cdn.office.net/assets/mail/pwa/v1/pngs/Outlook.512x512.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/outlook.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.8
+// @version      1.0.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -13,6 +13,18 @@
 // ==/UserScript==
 
 GM_addStyle(`
+
+div:has(> div[title^="In-Place Archive - "]) {
+  display: none;
+}
+
+div:has(> div[title^="Personal Archive - "]) {
+  display: none;
+}
+
+div:has(> div[title="OneDrive"]) {
+  display: none;
+}
 
 button[title="More apps"] {
   display: none;
