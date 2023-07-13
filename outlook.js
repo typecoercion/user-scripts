@@ -3,7 +3,7 @@
 // @icon         https://res-1.cdn.office.net/assets/mail/pwa/v1/pngs/Outlook.512x512.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/outlook.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.9
+// @version      1.1.0
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
