@@ -4,7 +4,7 @@
 // @icon         https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-96x96-72d9855.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/teams.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -14,6 +14,10 @@
 // ==/UserScript==
 
 GM_addStyle(`
+
+#chatstab {
+  font-size: 0.8em;
+}
 
 #chatstab .left-rail-item-hover {
   display: none;
@@ -29,6 +33,11 @@ GM_addStyle(`
 
 #chatstab div[data-tid="pinned-chat-list"] div.left-rail-item-hover {
   display: block;
+}
+
+#chatstab div[data-tid="chat-list-recent-section"],
+#chatstab div[data-tid="chat-list-pinned-section"] {
+  display: none;
 }
 
 channel-list img.team-icon {
