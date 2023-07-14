@@ -4,7 +4,7 @@
 // @icon         https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-96x96-72d9855.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/teams.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -74,7 +74,8 @@ channel-list .left-rail-item-hover a.open-channel-mgr {
   color: inherit;
   display: inline-block;
   height: 14px;
-  max-width: 24px;
+  max-width: 34px;
+  opacity: 0.6;
   padding: 0px 8px;
   text-align: center;
   text-wrap: wrap;
