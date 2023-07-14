@@ -4,7 +4,7 @@
 // @icon         https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-96x96-72d9855.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/teams.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.4
+// @version      1.0.5
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -88,6 +88,10 @@ channel-list .left-rail-item-hover a.open-channel-mgr .channel-list-show-icon-on
 channel-list .channel-list-team-header a.unread, .pin-channel-list-header a.unread {
   color: inherit;
   font-weight: 600;
+}
+
+channel-list .ts-left-rail-tree .expand-collapse-icon-default {
+  margin-left: 4px;
 }
 
 div.ts-title-bar-icon {
