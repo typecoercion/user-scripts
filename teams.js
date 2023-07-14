@@ -4,7 +4,7 @@
 // @icon         https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-96x96-72d9855.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/teams.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
