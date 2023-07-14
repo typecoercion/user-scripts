@@ -56,8 +56,41 @@ channel-list .channel-list-channels {
   font-size: 0.8em;
 }
 
+channel-list .ts-channel-list .channels ul {
+  margin-bottom: 20px;
+}
+
+channel-list .ts-channel-list .team.match-parent {
+  margin-bottom: 0;
+}
+
+channel-list .left-rail-item-hover:has(> a.open-channel-mgr) {
+  position: absolute;
+  top: 9px;
+  right: 40px;
+}
+
+channel-list .left-rail-item-hover a.open-channel-mgr {
+  color: inherit;
+  display: inline-block;
+  height: 14px;
+  max-width: 24px;
+  padding: 0px 8px;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+channel-list .left-rail-item-hover a.open-channel-mgr .channel-list-show-icon-on-hover {
+  display: none !important;
+}
+
+channel-list .channel-list-team-header a.unread, .pin-channel-list-header a.unread {
+  color: inherit;
+  font-weight: 600;
+}
+
 div.ts-title-bar-icon {
   display: none !important;
 }
 
-`)
+`);
