@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.2
+// @version      1.5.3
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -23,19 +23,19 @@ body {
   z-index: 203 !important;
 }
 
-.p-channel_sidebar {
+div.p-channel_sidebar {
   font-size: 11px;
 }
 
-.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_plus {
+div.p-channel_sidebar--iap1 button.p-channel_sidebar__section_heading_plus {
   opacity: 0;
 }
 
-.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_plus:hover {
+div.p-channel_sidebar--iap1 button.p-channel_sidebar__section_heading_plus:hover {
   opacity: 1;
 }
 
-.p-client {
+div.p-client {
   height: calc(100vh + 45px);
 }
 
@@ -65,31 +65,31 @@ body {
   fill: #D1D2D3;
 }
 
-.p-channel_sidebar__compose_button, .p-channel_sidebar__compose_button--iap1 {
+button.p-channel_sidebar__compose_button, .p-channel_sidebar__compose_button--iap1 {
   box-shadow: none !important;
   background: none !important;
   color: var(--p-channel_sidebar__top-nav-text);
   opacity: 0.8;
 }
 
-.p-ia__sidebar_header__team_name {
+button.p-ia__sidebar_header__team_name {
   margin: 4px 22px 0;
   height: 16px;
 }
 
-.p-ia__sidebar_header__team_name_text {
+span.p-ia__sidebar_header__team_name_text {
   display: none;
 }
 
-.p-top_nav__search__filters--has-query {
+button.p-top_nav__search__filters--has-query {
   right: 0;
 }
 
-.p-top_nav__search__text {
+span.p-top_nav__search__text {
   display: none;
 }
 
-.p-top_nav__search__container {
+div.p-top_nav__search__container {
   display: block;
   position: absolute;
   top: 56px;
@@ -97,33 +97,37 @@ body {
   width: 64px;
 }
 
-.p-top_nav__search__container button {
+div.p-top_nav__search__container button {
   background: none;
   box-shadow: none;
 }
 
-.p-top_nav__search__container button:hover {
+div..p-top_nav__search__container button:hover {
   box-shadow: none;
 }
 
-.p-top_nav__search__container button i {
+div..p-top_nav__search__container button i {
   color: #555;
 }
 
-.p-top_nav__search__container button i::before {
+div..p-top_nav__search__container button i::before {
   font-size: 20px;
 }
 
-.p-top_nav__search__clear--toggle-larger-top-nav-bar {
-  display: none !important;
+button.p-top_nav__search__clear {
+  display: none;
 }
 
-.p-top_nav__right {
+div.p-top_nav__right {
   min-width: 0 !important;
   padding: 0;
   position: absolute;
   top: 55px;
   left: 9px;
+}
+
+span.p-channel_sidebar__section_heading_more_label {
+  display: none;
 }
 
 [data-qa="top-nav-help-button"] {
