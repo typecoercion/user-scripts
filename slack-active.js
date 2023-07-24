@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-active.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.4
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -16,6 +16,9 @@
 /* eslint-disable no-proto */
 /* eslint-disable accessor-pairs */
 /* eslint-disable no-global-assign */
+
+// new setInterval on line 71 https://gist.github.com/THOUSAND-SKY/91551e4f4d9cabecec6b962f013cccca
+// huddle compatibility https://gist.github.com/pannal/b9e5f740555434639bd0b8705fa10c6a
 
 ((window, mutateEvent) => {
   'use strict';
@@ -68,6 +71,17 @@
 
   // Root logger
   const console = Object.assign({}, protoConsole, {_socketId: ''});
+
+  // This was added in version 1.0.2.
+  const interv = window.setInterval(() => {
+    const el = window.document.querySelector(".p-ia__nav__user__avatar > span:nth-child(1) > img:nth-child(1)");
+    console.log('el', el)
+    const url = el.src;
+    console.log("matching from:", url);
+    userId = url.match(/(?:[^-]*-){2}([^-\\n]+)/)[1]
+    console.log('loaded userId as', userId)
+    window.clearInterval(interv)
+  }, 5000);
 
   const statusDiv = {
     id: 'SAA229064402df15c8079ac', // Something random
@@ -316,7 +330,13 @@
       ws.hooks.listenReceive = (event, currWs) => {
         const details = currWs.details;
         if (event && event.data) {
-          let obj = JSON.parse(event.data);
+          let obj;
+          try {
+            obj = JSON.parse(event.data);
+          } catch (e) {
+            console.debug("Binary message received (Huddle), skipping");
+            return
+          }
 
           if (objMatchesProto(PONG_MSG, obj)) {
             // Get one pong message event as a prototype
@@ -362,9 +382,9 @@
             if (obj[keys[1]] === userId) {
               const msg = (obj[keys[2]] || '').trim().toLowerCase();
               switch (msg) {
-                case 'siTCill!':
+                case 'sigkill!':
                 case 'sigterm!':
-                  currWs.console.log('User SITCILL received. Closing this window.');
+                  currWs.console.log('User SIGKILL received. Closing this window.');
                   document.location.href = 'about:blank';
                   break;
                 case 'sighup!':
@@ -381,7 +401,18 @@
         const details = currWs.details;
         if (data && data.constructor === Array) {
           let payload = data[0];
-          let obj = JSON.parse(payload);
+          let obj;
+
+          try {
+            obj = JSON.parse(payload);
+          } catch (e) {
+            console.debug("Skipping binary payload (Huddle)");
+
+            // inside a huddle == always active?
+            details._lastTickleSent = Date.now();
+            details._lastPingSent = Date.now();
+            return
+          }
 
           if (objMatchesProto(PING_MSG, obj)) {
             if (details._isPingChannel !== true) {
