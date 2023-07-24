@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.3
+// @version      1.5.4
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -143,6 +143,10 @@ span.p-channel_sidebar__section_heading_more_label {
 }
 
 .p-upgrades_button--top_nav {
+    display: none;
+}
+
+i.p-all_unreads_header_team_icon {
     display: none;
 }
 
