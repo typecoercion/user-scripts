@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.4
+// @version      1.5.5
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -39,10 +39,14 @@ div.p-client {
   height: calc(100vh + 45px);
 }
 
-.p-top_nav__history_menu {
+button.p-top_nav__history_menu {
   position: absolute !important;
   top: 56px;
   left: 180px;
+}
+
+button.p-top_nav__history_menu:hover {
+ background: none;
 }
 
 .p-top_nav__history_menu span{
@@ -69,7 +73,6 @@ button.p-channel_sidebar__compose_button, .p-channel_sidebar__compose_button--ia
   box-shadow: none !important;
   background: none !important;
   color: var(--p-channel_sidebar__top-nav-text);
-  opacity: 0.8;
 }
 
 button.p-ia__sidebar_header__team_name {
@@ -98,8 +101,8 @@ div.p-top_nav__search__container {
 }
 
 div.p-top_nav__search__container button {
-  background: none;
-  box-shadow: none;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 div..p-top_nav__search__container button:hover {
