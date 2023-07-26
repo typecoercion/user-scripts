@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.5
+// @version      1.5.6
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -100,20 +100,20 @@ div.p-top_nav__search__container {
   width: 64px;
 }
 
-div.p-top_nav__search__container button {
-  background: none !important;
-  box-shadow: none !important;
-}
-
-div..p-top_nav__search__container button:hover {
+button.p-top_nav__search, button.p-top_nav__search:hover {
+  background: none;
   box-shadow: none;
 }
 
-div..p-top_nav__search__container button i {
+div.p-top_nav__search__container button:hover {
+  box-shadow: none;
+}
+
+div.p-top_nav__search__container button i {
   color: #555;
 }
 
-div..p-top_nav__search__container button i::before {
+div.p-top_nav__search__container button i::before {
   font-size: 20px;
 }
 
