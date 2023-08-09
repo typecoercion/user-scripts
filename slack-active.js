@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-active.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.4
+// @version      1.0.5
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -74,7 +74,8 @@
 
   // This was added in version 1.0.2.
   const interv = window.setInterval(() => {
-    const el = window.document.querySelector(".p-ia__nav__user__avatar > span:nth-child(1) > img:nth-child(1)");
+    // Profile pic.
+    const el = window.document.querySelector(".p-ia__nav__user__avatar > .c-base_icon__width_only_container > img");
     console.log('el', el)
     const url = el.src;
     console.log("matching from:", url);
@@ -96,7 +97,7 @@
       this._div.id = this.id;
       this._div.style.cssText = '' +
         'display:block;position:fixed;overflow:hidden;' +
-        'top:0;left:0;width:100%;height:2px;opacity:0.5;' +
+        'top:0;left:0;width:100%;height:8px;opacity:0.5;' +
         'z-index:2147483647;background:#fff;'
       document.body.appendChild(this._div);
 
