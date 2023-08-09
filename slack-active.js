@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-active.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -97,7 +97,7 @@
       this._div.id = this.id;
       this._div.style.cssText = '' +
         'display:block;position:fixed;overflow:hidden;' +
-        'top:0;left:0;width:100%;height:8px;opacity:0.5;' +
+        'top:0;left:0;width:100%;height:2px;opacity:0.5;' +
         'z-index:2147483647;background:#fff;'
       document.body.appendChild(this._div);
 
