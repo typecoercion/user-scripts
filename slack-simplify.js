@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-simplify.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -40,6 +40,17 @@ button.p-account_switcher {
 
 button.p-ia4_home_header_menu__button {
   color: var(--dt_color-content-sec);
+}
+
+div.asa-pulse { /* temporarily override active script style for new slack design */
+  background-color: purple !important;
+  border-radius: 100%;
+  top: auto !important;
+  bottom: 19px !important;
+  left: 45px !important;
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
 }
 
 div.p-channel_sidebar--classic_nav {
