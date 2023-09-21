@@ -13,6 +13,12 @@
 // @run-at       document-end
 // ==/UserScript==
 
+(function() {
+  window.onload = function() {
+    document.querySelector("button.p-ia4_home_header_menu__button").innerHTML = `<svg data-2cq="true" aria-hidden="true" viewBox="0 0 20 20" className=""><path fill="currentColor" fill-rule="evenodd" d="M2.537 9.25a7.506 7.506 0 0 1 5.784-6.561c-.91 1.577-1.891 3.86-2.049 6.561H2.537ZM10 2.815c-.905 1.41-2.044 3.691-2.225 6.435h4.45c-.181-2.744-1.32-5.025-2.225-6.435Zm2.225 7.935h-4.45c.181 2.744 1.32 5.025 2.225 6.435.905-1.41 2.044-3.691 2.225-6.435Zm-.546 6.561c.91-1.577 1.891-3.86 2.05-6.561h3.734a7.506 7.506 0 0 1-5.784 6.561Zm2.05-8.061c-.159-2.7-1.14-4.984-2.05-6.561a7.506 7.506 0 0 1 5.784 6.561h-3.735Zm-11.192 1.5h3.735c.158 2.7 1.138 4.984 2.05 6.561a7.505 7.505 0 0 1-5.785-6.561ZM10 1a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" clip-rule="evenodd"></path></svg>`;
+  }
+})();
+
 GM_addStyle(`
 
 :root {
@@ -30,6 +36,10 @@ body {
 
 button.p-account_switcher {
   display: none;
+}
+
+button.p-ia4_home_header_menu__button {
+  color: var(--dt_color-content-sec);
 }
 
 div.p-channel_sidebar--classic_nav {
@@ -93,7 +103,7 @@ div.p-tab_rail {
 }
 
 span.p-ia4_home_header_menu__team_name {
-  width: 0;
+  width: 0; /* hide team name while it is being replaced */
 }
 
 `);
