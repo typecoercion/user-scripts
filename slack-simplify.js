@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-simplify.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -22,8 +22,8 @@ GM_addStyle(`
 }
 
 body {
-  height: calc(100vh + var(--x-adjust-height));
   font-size: 13px;
+  height: calc(100vh + var(--x-adjust-height));
   margin: calc(0px - var(--x-top-offset)) 0 0 -2px;
   width: calc(100vw + var(--x-adjust-width));
 }
@@ -77,7 +77,7 @@ div.p-ia4_client div.p-view_contents--primary {
 }
 
 div.p-tab_rail {
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5) !important;
   padding-top: 0;
 }
 
