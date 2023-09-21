@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.6
+// @version      1.5.7
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -12,6 +12,10 @@
 // @grant        GM_addStyle
 // @run-at       document-end
 // ==/UserScript==
+
+(function() {
+  localStorage.setItem("localConfig_v2", localStorage.getItem("localConfig_v2").replace(/\"is_unified_user_client_enabled\":true/g, '\"is_unified_user_client_enabled\":false'))
+})();
 
 GM_addStyle(`
 
