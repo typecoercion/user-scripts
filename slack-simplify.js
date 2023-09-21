@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Slack Simplify
+// @name         Slack: UI
 // @description  Interface tweaks.
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-simplify.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -77,6 +77,7 @@ div.p-ia4_client div.p-view_contents--primary {
 }
 
 div.p-tab_rail {
+  background: rgba(255, 255, 255, 0.5);
   padding-top: 0;
 }
 
