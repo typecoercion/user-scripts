@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-simplify.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -28,10 +28,6 @@ body {
   width: calc(100vw + var(--x-adjust-width));
 }
 
-div.p-ia__view_header__title i.c-team_icon {
-  display: none;
-}
-
 button.p-account_switcher {
   display: none;
 }
@@ -40,8 +36,19 @@ div.p-channel_sidebar--classic_nav {
   font-size: 13px;
 }
 
+div.p-channel_sidebar__section_heading {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 0px !important;
+    padding: 0 22px !important;
+    height: 38px !important;
+}
+
 div.p-channel_sidebar__section_heading_label {
   font-size: 11px;
+}
+
+div.p-ia__view_header__title i.c-team_icon {
+  display: none;
 }
 
 div.p-theme_background {
