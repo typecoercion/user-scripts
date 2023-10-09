@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.7
+// @version      1.5.8
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -86,6 +86,10 @@ button.p-ia__sidebar_header__team_name {
 
 span.p-ia__sidebar_header__team_name_text {
   display: none;
+}
+
+button.p-top_nav__search__filters {
+  top: 4px;
 }
 
 button.p-top_nav__search__filters--has-query {
