@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         GitLab
-// @icon         https://assets.gitlab-static.net/assets/msapplication-tile-1196ec67452f618d39cdd85e2e3a542f76574c071051ae7effbfde01710eb17d.png
+// @icon         https://about.gitlab.com/nuxt-images/ico/mstile-144x144.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/gitlab.js
 // @namespace    http://tampermonkey.net/
-// @version      0.0.8
+// @version      0.0.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
