@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack.js
 // @namespace    http://tampermonkey.net/
-// @version      1.5.9
+// @version      1.6.0
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -14,7 +14,13 @@
 // ==/UserScript==
 
 (function() {
-  localStorage.setItem("localConfig_v2", localStorage.getItem("localConfig_v2").replace(/\"is_unified_user_client_enabled\":true/g, '\"is_unified_user_client_enabled\":false'))
+  localStorage.setItem("localConfig_v2", localStorage.getItem("localConfig_v2").replace(/\"is_unified_user_client_enabled\":true/g, '\"is_unified_user_client_enabled\":false'));
+
+  setInterval(function(){
+    if (document.getElementsByClassName('p-ia4_client_container')[0]) {
+      location.reload();
+    }
+  }, 2000);
 })();
 
 GM_addStyle(`
@@ -146,19 +152,19 @@ span.p-channel_sidebar__section_heading_more_label {
 }
 
 .p-workspace__primary_view {
-    max-height: calc(100vh) !important;
+  max-height: calc(100vh) !important;
 }
 
 .p-workspace__secondary_view {
-    max-height: calc(100vh) !important;
+  max-height: calc(100vh) !important;
 }
 
 .p-upgrades_button--top_nav {
-    display: none;
+  display: none;
 }
 
 i.p-all_unreads_header_team_icon {
-    display: none;
+  display: none;
 }
 
 div.p-ia__sidebar_header__upgrade_cta {
