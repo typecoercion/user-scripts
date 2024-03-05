@@ -3,7 +3,7 @@
 // @icon         https://res-1.cdn.office.net/assets/mail/pwa/v1/pngs/Outlook.512x512.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/outlook.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.2
+// @version      1.1.3
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -14,7 +14,7 @@
 
 GM_addStyle(`
 
-a#O365_MainLink_TenantLogo {
+div#tenantLogo_container {
   display: none;
 }
 
