@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -33,6 +33,11 @@ body {
 
 div.p-channel_sidebar--classic_nav {
   font-size: 13px;
+}
+
+div.p-ia4_sidebar_header.p-ia4_home_header:not(.p-ia4_home_header--setup,.p-ia4_home_header--with_guided_trial_badge) {
+  --saf-0: rgba(var(--sk_foreground_low,29,28,29),.13);
+  box-shadow: 0 1px 0 0 var(--saf-0);
 }
 
 div.p-ia4_upgrade_button__container {
