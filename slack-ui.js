@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         Slack UI
+// @name         Slack: UI
 // @description  Interface tweaks.
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -35,11 +35,15 @@ div.p-channel_sidebar--classic_nav {
   font-size: 13px;
 }
 
-i.p-all_unreads_header_team_icon {
+div.p-ia4_upgrade_button__container {
   display: none;
 }
 
 div.p-workspace_banner__desktop-download-app {
+  display: none;
+}
+
+i.p-all_unreads_header_team_icon {
   display: none;
 }
 
