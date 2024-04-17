@@ -4,7 +4,7 @@
 // @icon         https://statics.teams.cdn.office.net/hashed/favicon/prod/favicon-96x96-72d9855.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/teams.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.1
+// @version      1.1.2
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -20,9 +20,8 @@ GM_addStyle(`
 }
 
 [data-tid="channel-list-container"] div.ui-tree__item a.ui-tree__title {
-  margin-left: -30px;
-  margin-right: -10px;
   font-size: 12px;
+  padding: 0 10px;
 }
 
 /*
