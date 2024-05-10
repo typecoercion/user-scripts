@@ -3,11 +3,11 @@
 // @icon         https://wac-cdn.atlassian.com/misc-assets/webp-images/jira-logo.svg
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/jira.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
-// @include      /^https:\/\/.*(dev|jira)\..*\..*\/(browse|projects|secure)\/.*$/
+// @include      /^https:\/\/.*(dev|jira)(\.?.*)\..*\..*\/(browse|projects|secure)\/.*$/
 // @grant        GM_addStyle
 // @run-at       document-body
 // ==/UserScript==
