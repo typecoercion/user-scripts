@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Jira
-// @icon         https://wac-cdn.atlassian.com/misc-assets/webp-images/jira-logo.svg
+// @icon         https://id.atlassian.com/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/jira.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.0.2
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
-// @include      /^https:\/\/.*(dev|jira)(\.?.*)\..*\..*\/(browse|projects|secure)\/.*$/
+// @include      /^https:\/\/.*(dev|jira)(\.?.*)\..*\..*\/(browse|issues|projects|secure)\/.*$/
 // @grant        GM_addStyle
 // @run-at       document-body
 // ==/UserScript==
@@ -15,6 +15,10 @@
 GM_addStyle(`
 
 div#announcement-banner {
+  display: none;
+}
+
+div#gantt-msg {
   display: none;
 }
 
