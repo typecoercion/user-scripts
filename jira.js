@@ -3,7 +3,7 @@
 // @icon         https://id.atlassian.com/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/jira.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -53,6 +53,10 @@ input#quickSearchInput {
 }
 
 .aui-header .aui-icon.aui-icon-small {
+  --aui-icon-size: 16px;
+}
+
+.aui-header .aui-header-secondary > .aui-nav > li > a > .aui-icon {
   --aui-icon-size: 16px;
 }
 
