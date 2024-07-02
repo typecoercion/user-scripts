@@ -4,13 +4,13 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
 // @match        https://app.slack.com/client/*
 // @grant        GM_addStyle
-// @run-at       document-end
+// @run-at       document-idle
 // ==/UserScript==
 
 GM_addStyle(`
@@ -46,6 +46,10 @@ div.p-ia4_upgrade_button__container {
 
 div.p-workspace_banner__desktop-download-app {
   display: none;
+}
+
+div.ReactModal__Overlay div.ReactModal__Content:has(> div > .c-search_modal__wrapper) {
+  top: 50px !important;
 }
 
 i.p-all_unreads_header_team_icon {
