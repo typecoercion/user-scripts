@@ -3,7 +3,7 @@
 // @icon         https://id.atlassian.com/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/jira.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -46,6 +46,14 @@ header#header > .aui-header.aui-dropdown2-trigger-group .aui-nav > li > a {
   --aui-appheader-item-focus-text-color: #deebff;
   --aui-appheader-item-active-bg-color: #033681;
   --aui-appheader-item-active-text-color: #deebff;
+}
+
+input#quickSearchInput {
+    background: var(--aui-appheader-quicksearch-bg-color) !important;
+}
+
+.aui-header .aui-icon.aui-icon-small {
+  --aui-icon-size: 16px;
 }
 
 `);
