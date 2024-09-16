@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.6
+// @version      1.0.7
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -43,6 +43,7 @@ body {
 }
 
 div[data-sidebar-link-id="add_more_items_app"],
+div[data-item-key="addMoreChannels"],
 div[data-item-key="addMoreDM"] {
   display: none;
 }
