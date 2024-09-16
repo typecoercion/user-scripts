@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.7
+// @version      1.0.8
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -89,6 +89,12 @@ span.p-ia4_home_header_menu__team_name {
 
 .p-theme_background {
   height: calc(100vh + var(--x-height-add1)) !important;
+}
+
+.p-channel_sidebar__section_heading_button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 
 `);
