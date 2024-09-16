@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -40,6 +40,11 @@ button.p-account_switcher {
 body {
   margin-top: calc(-1 * var(--x-height-add0)) !important;
   height: calc(100vh + var(--x-height-add1)) !important;
+}
+
+div[data-sidebar-link-id="add_more_items_app"],
+div[data-item-key="addMoreDM"] {
+  display: none;
 }
 
 div.p-channel_sidebar--classic_nav {
