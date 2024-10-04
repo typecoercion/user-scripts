@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.9
+// @version      1.1.0
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -15,7 +15,7 @@
 
 const setTitle = function() {
   if (document.title.includes('- Slack') ) {
-    let title = document.title.replace(/ - ([A-Z][a-z][\s\w])+ - Slack/, '');
+    let title = document.title.replace(/\s-\s.*\sSlack/, '');
     document.title = title;
   }
 }
