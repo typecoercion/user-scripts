@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.8
+// @version      1.0.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -15,14 +15,14 @@
 
 const setTitle = function() {
   if (document.title.includes('- Slack') ) {
-    let title = document.title.replace(/ - [\s\w]+ - Slack/, '');
+    let title = document.title.replace(/ - ([A-Z][a-z][\s\w])+ - Slack/, '');
     document.title = title;
   }
 }
 
 setInterval(() => {
   setTitle();
-}, 20);
+}, 40);
 
 GM_addStyle(`
 
@@ -31,6 +31,11 @@ GM_addStyle(`
   --x-height-add1: 36px;
   --x-height-min0: 8px;
   --x-height-min1: 4px;
+}
+
+button[data-qa="workspace_filter_menu"] {
+  font-size: 13px;
+  margin-top: 9px;
 }
 
 button.p-account_switcher {
