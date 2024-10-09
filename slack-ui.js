@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.2
+// @version      1.1.3
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -58,7 +58,7 @@ div.p-channel_sidebar--classic_nav {
 }
 
 div.p-ia4_client div.p-client_workspace__layout {
-  border-radius: 0;
+  border-radius: 6px 0 0 0;
   margin-right: var(--x-height-min1);
 }
 
