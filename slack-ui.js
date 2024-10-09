@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.1
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -27,10 +27,10 @@ setInterval(() => {
 GM_addStyle(`
 
 :root {
-  --x-height-add0: 36px;
-  --x-height-add1: 36px;
-  --x-height-min0: 8px;
-  --x-height-min1: 4px;
+  --x-height-add0: 40px;
+  --x-height-add1: 40px;
+  --x-height-min0: 0px;
+  --x-height-min1: -4px;
 }
 
 button[data-qa="workspace_filter_menu"] {
@@ -55,6 +55,11 @@ div[data-item-key="addMoreDM"] {
 
 div.p-channel_sidebar--classic_nav {
   font-size: 13px;
+}
+
+div.p-ia4_client div.p-client_workspace__layout {
+  border-radius: 0;
+  margin-right: var(--x-height-min1);
 }
 
 div.p-ia4_sidebar_header.p-ia4_home_header:not(.p-ia4_home_header--setup,.p-ia4_home_header--with_guided_trial_badge) {
