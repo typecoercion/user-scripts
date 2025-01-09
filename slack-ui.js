@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.3
+// @version      1.1.4
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -49,7 +49,8 @@ body {
 
 div[data-sidebar-link-id="add_more_items_app"],
 div[data-item-key="addMoreChannels"],
-div[data-item-key="addMoreDM"] {
+div[data-item-key="addMoreDM"],
+div[data-qa="open-desktop-app-wrapper"] {
   display: none;
 }
 
@@ -92,13 +93,7 @@ span.p-ia4_home_header_menu__team_name {
 }
 
 .p-ia4_client .p-client_workspace_wrapper {
-  height: calc(100vh - var(--x-height-min1)) !important;
-}
-
-.p-ia4_client.p-ia4_client--with-search-in-top-nav .p-view_contents--primary,
-.p-ia4_client.p-ia4_client--with-search-in-top-nav .p-view_contents--secondary,
-.p-ia4_client.p-ia4_client--with-search-in-top-nav .p-view_contents--sidebar {
-  max-height: calc(100vh - var(--x-height-min0)) !important;
+  height: calc(100vh + 44px) !important;
 }
 
 .p-theme_background {
@@ -109,6 +104,12 @@ span.p-ia4_home_header_menu__team_name {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.8em;
+}
+
+div.p-ia4_client div.p-view_contents--primary,
+div.p-ia4_client div.p-view_contents--secondary,
+div.p-ia4_client div.p-view_contents--sidebar {
+  max-height: 100vh;
 }
 
 `);
