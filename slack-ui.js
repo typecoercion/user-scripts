@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.4
+// @version      1.1.5
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -31,6 +31,11 @@ GM_addStyle(`
   --x-height-add1: 40px;
   --x-height-min0: 0px;
   --x-height-min1: -4px;
+}
+
+a.p-upgrades_button,
+div[data-qa="upgrade-menu-item-wrapper"] {
+    display: none;
 }
 
 button[data-qa="workspace_filter_menu"] {
