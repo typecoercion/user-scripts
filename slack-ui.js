@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.5
+// @version      1.1.6
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -13,12 +13,29 @@
 // @run-at       document-idle
 // ==/UserScript==
 
+let titleSuffix = ' | ^'
+let titleWS = localStorage.getItem('_WS') || '_SET_WS_';
+
 const setTitle = function() {
-  if (document.title.includes('- Slack') ) {
-    let title = document.title.replace(/\s-\s.*\sSlack/, '');
+  const url = new URL(window.location);
+  const params = new URLSearchParams(url.search);
+
+  if (params.get('single_channel')) {
+    let title = document.title.replace(/\s-\s.*\sSlack/, ` - ${titleWS} ${titleSuffix}`);
     document.title = title;
+  } else {
+    if (document.title.includes('- Slack') ) {
+      let title = document.title.replace(/\s-\s.*\sSlack/, ` - ${titleWS}`);
+      document.title = title;
+    }
   }
 }
+
+setTimeout(() => {
+  titleSuffix = '';
+  let title = document.title.replace(/ \| \^/, '');
+  document.title = title;
+}, 10 * 1000);
 
 setInterval(() => {
   setTitle();
