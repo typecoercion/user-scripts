@@ -4,7 +4,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.6
+// @version      1.1.7
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -33,7 +33,7 @@ const setTitle = function() {
 
 setTimeout(() => {
   titleSuffix = '';
-  let title = document.title.replace(/ \| \^/, '');
+  let title = document.title.replace(/ \| \^/, ' ^');
   document.title = title;
 }, 10 * 1000);
 
