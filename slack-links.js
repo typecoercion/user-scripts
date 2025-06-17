@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name         Slack: Links
-// @description  Open all Slack links in the browser.
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-links.js
 // @namespace    http://tampermonkey.net/

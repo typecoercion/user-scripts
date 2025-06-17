@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name         Slack: UI
-// @description  Interface tweaks.
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
