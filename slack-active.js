@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name         Slack: Active
-// @description  Keep Slack session active.
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-active.js
 // @namespace    http://tampermonkey.net/
