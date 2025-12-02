@@ -3,7 +3,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.7
+// @version      1.1.8
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -131,6 +131,18 @@ div.p-ia4_client div.p-view_contents--primary,
 div.p-ia4_client div.p-view_contents--secondary,
 div.p-ia4_client div.p-view_contents--sidebar {
   max-height: 100vh;
+}
+
+.p-channel_sidebar:not(.p-channel_sidebar--visual-updates-m1) [data-show-avatars=false] .p-channel_sidebar__presence_icon.c-presence,
+.p-channel_sidebar__channel_icon_prefix {
+  margin-right: 8px !important;
+}
+
+.p-drag_layer .p-channel_sidebar__section_heading_label span.c-truncate div,
+.p-channel_sidebar--iap1 .p-channel_sidebar__section_heading_label span.c-truncate div {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase !important;
 }
 
 `);
