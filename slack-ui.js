@@ -3,7 +3,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.8
+// @version      1.1.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -64,8 +64,9 @@ button.p-account_switcher {
 }
 
 body {
-  margin-top: calc(-1 * var(--x-height-add0)) !important;
+  font-size: 13px;
   height: calc(100vh + var(--x-height-add1)) !important;
+  margin-top: calc(-1 * var(--x-height-add0)) !important;
 }
 
 div[data-sidebar-link-id="add_more_items_app"],
