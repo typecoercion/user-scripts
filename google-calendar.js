@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Google Calendar
-// @icon         https://calendar.google.com/googlecalendar/images/favicons_2020q4/calendar_31_256.ico
+// @icon         https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/google-calendar.js
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
@@ -14,8 +14,8 @@
 
 GM_addStyle(`
 
-[data-ogsr-up] {
-  display: none;
-}
+  .gb_Ha:not(.gb_9a) .gb_Xa {
+    display: none;
+  }
 
-`);
+  `);
