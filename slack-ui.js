@@ -3,7 +3,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.2.0
+// @version      1.2.1
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -155,12 +155,11 @@ div.p-ia4_client div.p-view_contents--sidebar {
   margin-right: 7px !important;
 }
 
-.labelContent__ND43C {
-  margin-left: 5px !important;
-}
-
-.p-channel_sidebar__link .p-channel_sidebar__name {
-  margin-left: 5px !important;
+span[class^='labelContent__'] {
+  font-size: 11px;
+  margin-left: 5px;
+  padding-top: 1px;
+  text-transform: uppercase;
 }
 
 `);
