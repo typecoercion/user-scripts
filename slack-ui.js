@@ -76,7 +76,7 @@ div[data-qa="open-desktop-app-wrapper"] {
   display: none;
 }
 
-div.p-client_workspace__tabpanel {
+div.p-ia4_client.p-ia4_client--with-split-view-feature:not(.p-ia4_client--with-ai-apps-split-view-showing) div.p-client_workspace__tabpanel {
   border-radius: 6px 6px 20px;
 }
 
