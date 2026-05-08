@@ -3,7 +3,7 @@
 // @icon         https://res-1.cdn.office.net/assets/mail/pwa/v1/pngs/Outlook.512x512.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/outlook.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.7
+// @version      1.1.8
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -16,14 +16,6 @@
 GM_addStyle(`
 
 button[data-tid="appbar-flyout-button"] {
-  display: none !important;
-}
-
-div#O365_MainLink_TenantLogo_container {
-  display: none !important;
-}
-
-div#tenantLogo_container {
   display: none !important;
 }
 
@@ -63,8 +55,8 @@ div[title="Go to Yammer"] {
   display: none;
 }
 
-img#O365_MainLink_TenantLogoImg {
-  display: none !important;
+div:has(> img[alt="Organizational Logo"]) {
+  display: none;
 }
 
 `);
