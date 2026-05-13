@@ -3,12 +3,11 @@
 // @icon         https://res-1.cdn.office.net/assets/mail/pwa/v1/pngs/Outlook.512x512.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/outlook.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.8
+// @version      1.1.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
-// @include      /^https:\/\/outlook\.(office|office365)\.com\/(calendar|mail)\/.*$/
-// @include      /^https:\/\/.*\.sharepoint\.com\/.*$/
+// @include      https://outlook.cloud.microsoft/mail/*
 // @grant        GM_addStyle
 // @run-at       document-idle
 // ==/UserScript==
