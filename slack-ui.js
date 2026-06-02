@@ -3,7 +3,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.2.6
+// @version      1.2.7
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -37,8 +37,10 @@ setTimeout(() => {
 }, 10 * 1000);
 
 setInterval(() => {
-  setTitle();
-}, 40);
+  if (document.title.indexOf(/ - (A|F|N|T)([A-Za-z\s]+)[a-z] - /)) {
+    setTitle();
+  }
+}, 100);
 
 GM_addStyle(`
 
