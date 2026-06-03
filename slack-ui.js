@@ -3,7 +3,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-ui.js
 // @namespace    http://tampermonkey.net/
-// @version      1.2.8
+// @version      1.2.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -36,11 +36,12 @@ setTimeout(() => {
   document.title = title;
 }, 10 * 1000);
 
-setInterval(() => {
-  if (document.title.indexOf(/ - (A|F|N|T)([A-Za-z\s]+)[a-z] - /)) {
-    setTitle();
-  }
-}, 100);
+// causing random audio notifications when the title changes
+// setInterval(() => {
+//   if (document.title.indexOf(/ - (A|F|N|T)([A-Za-z\s]+)[a-z] - /)) {
+//     setTitle();
+//   }
+// }, 100);
 
 GM_addStyle(`
 
