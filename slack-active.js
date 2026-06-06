@@ -3,7 +3,7 @@
 // @icon         https://a.slack-edge.com/cebaa/img/ico/favicon.ico
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/slack-active.js
 // @namespace    http://tampermonkey.net/
-// @version      1.0.8
+// @version      1.0.9
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -116,11 +116,11 @@
                     transform:scale(1);
                 }
                 70% {
-                    -webkit-transform:scale(4);
-                    -moz-transform:scale(4);
-                    -ms-transform:scale(4);
-                    -o-transform:scale(4);
-                    transform:scale(4);
+                    -webkit-transform:scale(2);
+                    -moz-transform:scale(2);
+                    -ms-transform:scale(2);
+                    -o-transform:scale(2);
+                    transform:scale(2);
                 }
                 100% {
                     -webkit-transform:scale(1);

@@ -3,7 +3,7 @@
 // @icon         https://res-1.cdn.office.net/assets/mail/pwa/v1/pngs/Outlook.512x512.png
 // @downloadURL  https://raw.githubusercontent.com/typecoercion/user-scripts/main/outlook.js
 // @namespace    http://tampermonkey.net/
-// @version      1.1.9
+// @version      1.2.0
 // @description  TC
 // @author       TC
 // @homepage     https://github.com/typecoercion/user-scripts
@@ -23,10 +23,6 @@ div:has(> div[title^="In-Place Archive -"]) {
 }
 
 div:has(> div[title^="Personal Archive -"]) {
-  display: none;
-}
-
-div[aria-label="OneDrive"] {
   display: none;
 }
 
@@ -50,12 +46,12 @@ div[title="Go to OneDrive for Business"] {
   display: none;
 }
 
-div[title="Go to Yammer"] {
-  display: none;
+img#tenantLogo_container {
+  display: none !important;
 }
 
-div:has(> img[alt="Organizational Logo"]) {
-  display: none;
+div:has(> div[aria-label="OneDrive"]) {
+  display: none !important;
 }
 
 `);
